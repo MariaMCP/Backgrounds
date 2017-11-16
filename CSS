@@ -1,0 +1,10 @@
+body {
+  background-image:url("https://images.fineartamerica.com/images-medium-large/fawn-boxer-puppy-jody-trappe-photography.jpg");
+  background-size: 100%;
+  transition: all 0.3s ease-out;
+}
+button {
+  color: white;
+  padding: 10px;
+  font-size: 24px;
+}
