@@ -1,0 +1,28 @@
+var images = ["https://static1.squarespace.com/static/58c83ecfd2b8571e2d227eb1/t/58efc4bd893fc0b6e533ec74/1492108485149/logo+lockup.jpg", "http://thetwomusic.com/images/thetwo_small.jpg", "http://www.sentonmission.org/wp-content/uploads/three.jpg", "http://mdtheatreguide.com/wp-content/uploads/2015/09/4.jpg", "https://rynomi.files.wordpress.com/2016/12/acolgss1_400x400.jpeg"]//"http://cdn3-www.dogtime.com/assets/uploads/gallery/boxer-puppies/boxer-puppy-1.jpg", "http://cdn2-www.dogtime.com/assets/uploads/gallery/boxer-puppies/boxer-puppy-4.jpg", "http://www.mountaincrestboxers.com/wp-content/uploads/2014/10/001-244x300.jpg", "http://cdn1-www.dogtime.com/assets/uploads/2016/10/Boxer-Puppy-10.jpg", "http://www.myboxerdogbuddy.com/wp-content/uploads/2015/07/0508e153fa8f974f2901fa83d4e1ff5e.jpg", "https://i.pinimg.com/736x/be/27/39/be2739bdbf12662f392535182938cbab.jpg",  "http://i.imgur.com/qfC3We8.gif", "https://thumbs.gfycat.com/CompleteSneakyGuernseycow-max-1mb.gif", "https://images.fineartamerica.com/images-medium-large/fawn-boxer-puppy-jody-trappe-photography.jpg"];
+
+var imageHead = document.getElementById("header");
+
+var i=0;
+var count = 5000;
+var stop;
+var paused = false;
+myVar();
+function myVar() { 
+  stop = setInterval(function(){ 
+    imageHead.style.backgroundImage = "url(" + images[i] + ")";
+    i = i + 1; 
+    if (i == images.length) i =  0;  
+    console.log(i)   
+}, count);  
+};
+
+function stopFunction() {
+  if (i<(images.length-1)){
+    i+=1;
+  }
+  else {
+    i=0;
+  }
+  imageHead.style.backgroundImage = "url(" + images[i] + ")";
+  console.log(i);
+};
